@@ -1,0 +1,22 @@
+# PARTE 2 — Dockerfile (Flask)
+# Estudiante: David Joel Rivas Ortega
+
+# Construir la imagen (tag: mi-app-python:examen)
+Comando:
+  docker build -t mi-app-python:examen .
+
+# Ejecutar el contenedor (puerto 5000:5000, nombre: app-examen)
+Comando:
+  docker run -d --name app-examen -p 5000:5000 -e PORT=5000 mi-app-python:examen
+
+# Probar endpoints:
+Comandos:
+  curl http://localhost:5000/
+  curl http://localhost:5000/salud
+
+# Detener y limpiar:
+Comandos:
+  docker stop app-examen
+  docker rm app-examen
+
+# TIP: Ejecuta 'bash run.sh' en esta carpeta para generar automáticamente salidas reales (quedarán en este archivo).

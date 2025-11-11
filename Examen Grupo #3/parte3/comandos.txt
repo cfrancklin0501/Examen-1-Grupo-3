@@ -1,0 +1,29 @@
+# PARTE 3 — Docker Compose (API + Web + DB)
+# Estudiante: David Joel Rivas Ortega
+
+# Levantar todo el stack
+Comando:
+  docker-compose up -d
+
+# Verificar servicios corriendo
+Comando:
+  docker-compose ps
+
+# Probar API
+Comandos:
+  curl http://localhost:3000/
+  curl http://localhost:3000/salud
+
+# Probar Web
+Comando:
+  curl -I http://localhost:8080/
+
+# Ver logs (ejemplo: API)
+Comando:
+  docker-compose logs api --tail=100
+
+# Detener y limpiar todo (incluye volúmenes)
+Comando:
+  docker-compose down -v
+
+# Nota: Servicio opcional Mongo Express en http://localhost:8081 (si lo dejas habilitado)
